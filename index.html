@@ -1,35 +1,36 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Windows Setup</title>
+  <title>BIOS Simulator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="setup-window">
-    <h2>Install Windows</h2>
-    <label>Language to install:
-      <select>
-        <option>English (United States)</option>
-        <option>English (United Kingdom)</option>
-        <option>French</option>
-        <option>German</option>
-      </select>
-    </label>
-    <label>Time and currency format:
-      <select>
-        <option>English (United States)</option>
-        <option>French (France)</option>
-      </select>
-    </label>
-    <label>Keyboard or input method:
-      <select>
-        <option>US</option>
-        <option>UK</option>
-      </select>
-    </label>
-    <button onclick="nextStep()">Next</button>
+  <div id="boot-screen">
+    <pre>
+American Megatrends BIOS v2.1
+Press F2 to enter Setup
+Press DEL for Boot Menu
+    </pre>
+    <span class="cursor">_</span>
   </div>
+
+  <div id="bios-setup" class="hidden">
+    <h2>BIOS Setup Utility</h2>
+    <ul>
+      <li>Main</li>
+      <li>Advanced</li>
+      <li>Boot</li>
+      <li>Security</li>
+      <li>Exit</li>
+    </ul>
+    <div class="info">
+      <p>Date/Time: 09/08/2026 00:13</p>
+      <p>Boot Order: HDD → USB → Network</p>
+      <p>Password: [Not Set]</p>
+    </div>
+    <button onclick="exitSetup()">Exit</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
