@@ -1,0 +1,20 @@
+/* style.css */
+body {
+  background: #000;
+  font-family: Segoe UI, Tahoma, sans-serif;
+  color: #fff;
+}
+.setup-window {
+  background: #2d2d2d;
+  padding: 20px;
+  margin: 100px auto;
+  width: 400px;
+  border: 1px solid #555;
+}
+button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+}
