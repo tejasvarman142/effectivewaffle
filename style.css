@@ -1,20 +1,50 @@
-/* style.css */
 body {
-  background: #000;
-  font-family: Segoe UI, Tahoma, sans-serif;
-  color: #fff;
-}
-.setup-window {
-  background: #2d2d2d;
+  background: black;
+  color: lime;
+  font-family: monospace;
+  margin: 0;
   padding: 20px;
-  margin: 100px auto;
-  width: 400px;
-  border: 1px solid #555;
+}
+
+pre {
+  font-size: 16px;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.hidden {
+  display: none;
+}
+
+#bios-setup {
+  background: #111;
+  border: 1px solid #0f0;
+  padding: 20px;
+  margin-top: 20px;
+}
+#bios-setup h2 {
+  color: cyan;
+}
+#bios-setup ul {
+  list-style: none;
+  padding: 0;
+}
+#bios-setup li {
+  margin: 5px 0;
 }
 button {
   margin-top: 15px;
-  padding: 8px 16px;
-  background: #0078d7;
-  color: #fff;
-  border: none;
+  padding: 5px 10px;
+  background: #333;
+  color: lime;
+  border: 1px solid lime;
+  cursor: pointer;
 }
