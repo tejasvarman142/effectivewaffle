@@ -1,14 +1,92 @@
-document.addEventListener("keydown", function(event) {
-  if (event.key === "F2") {
-    document.getElementById("boot-screen").classList.add("hidden");
-    document.getElementById("bios-setup").classList.remove("hidden");
-  }
-  if (event.key === "Escape") {
-    exitSetup();
-  }
-});
+/* Force dark BIOS background */
+body {
+  background-color: #000 !important;
+  color: #00ff00 !important;
+  font-family: monospace;
+  margin: 0;
+  padding: 20px;
+}
 
-function exitSetup() {
-  document.getElementById("bios-setup").classList.add("hidden");
-  document.getElementById("boot-screen").classList.remove("hidden");
+/* Boot screen text */
+pre {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+/* Blinking cursor */
+.cursor {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Hidden state for toggling */
+.hidden {
+  display: none;
+}
+
+/* BIOS setup window */
+#bios-setup {
+  background: #111;
+  border: 1px solid #00ff00;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* Setup header */
+#bios-setup h2 {
+  color: cyan;
+  text-shadow: 0 0 5px cyan;
+}
+
+/* Menu list */
+#bios-setup ul {
+  list-style: none;
+  padding: 0;
+}
+#bios-setup li {
+  margin: 5px 0;
+  color: #00ff00;
+  cursor: pointer;
+}
+#bios-setup li:hover {
+  background: #222;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+/* Info panel */
+.info {
+  margin-top: 15px;
+  color: #00ff00;
+  font-size: 14px;
+}
+
+/* Buttons */
+button {
+  margin-top: 15px;
+  padding: 5px 10px;
+  background: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  cursor: pointer;
+}
+button:hover {
+  background: #111;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+/* CRT flicker effect */
+body {
+  animation: crt-flicker 0.1s infinite;
+}
+@keyframes crt-flicker {
+  0% { opacity: 0.98; }
+  50% { opacity: 1; }
+  100% { opacity: 0.99; }
 }
